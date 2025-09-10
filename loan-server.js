@@ -33,6 +33,11 @@ function findLoanById(id) {
   return db.get('loans').find({ id }).value();
 }
 
+
+// Health
+app.get('/health', (req, res) => {
+    res.json({ status: 'ok', message: 'Manager API is running' });
+  });
 // --- Routes
 
 // Get all loans
